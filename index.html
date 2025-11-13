@@ -1,3 +1,238 @@
-<p>Welcome to the Git Hub Workshop</p>
-<p>Organized by Protocol - Bhuvan</p>
-<p>Organized by Protocol - CSE</p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>YOUR_NAME • Portfolio</title>
+  <meta name="description" content="Portfolio of YOUR_NAME — projects, skills, contact." />
+  <meta name="author" content="YOUR_NAME" />
+  
+  <!-- Simple, self-contained styling -->
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#7c3aed; --glass: rgba(255,255,255,0.03);
+      --radius:12px; --maxw:1100px; --gap:18px; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:linear-gradient(180deg,#071021 0%, #07132a 100%); color:#e6eef6;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; line-height:1.5;
+      display:flex; justify-content:center; padding:36px;
+    }
+    .wrap{width:100%; max-width:var(--maxw); display:grid; gap:var(--gap);}
+    
+    /* ---------------- NEW LINK STYLE ---------------- */
+    a {
+      color: inherit;             /* No blue color */
+      text-decoration: none;      /* No underline */
+    }
+    a:hover {
+      opacity: 0.8;
+    }
+    a.btn:hover {
+      transform: translateY(-2px);
+      transition: 0.2s ease;
+    }
+    /* ------------------------------------------------ */
+
+    header{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      padding:18px; background:linear-gradient(180deg,var(--glass), rgba(255,255,255,0.02));
+      border-radius:18px; border:1px solid rgba(255,255,255,0.04);
+      box-shadow: 0 6px 24px rgba(2,6,23,0.6);
+      backdrop-filter: blur(6px);
+    }
+    .brand{display:flex; gap:12px; align-items:center;}
+    .logo{
+      width:56px; height:56px; border-radius:12px; display:grid; place-items:center;
+      font-weight:700; font-size:18px; background:linear-gradient(135deg,var(--accent), #4f46e5);
+      box-shadow:0 6px 18px rgba(124,58,237,0.18);
+    }
+    .brand h1{margin:0; font-size:18px; letter-spacing:0.2px}
+    .brand p{margin:0; color:var(--muted); font-size:13px}
+    nav{display:flex; gap:12px; align-items:center;}
+    
+    a.btn{
+      display:inline-block; padding:8px 12px; border-radius:10px; text-decoration:none; color:inherit;
+      border:1px solid rgba(255,255,255,0.04); background:transparent; font-size:14px;
+    }
+    a.cta{
+      background:linear-gradient(90deg,var(--accent), #4f46e5);
+      color:white; border:none; box-shadow:0 8px 26px rgba(79,70,229,0.14);
+    }
+
+    main{display:grid; gap:var(--gap);}
+    .hero{
+      display:grid; grid-template-columns:1fr 360px; gap:20px; align-items:center;
+      padding:22px; background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      border-radius:16px; border:1px solid rgba(255,255,255,0.03);
+    }
+    .intro h2{margin:0 0 8px 0; font-size:26px}
+    .intro p{margin:0; color:var(--muted)}
+    .hero .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      padding:16px; border-radius:12px; border:1px solid rgba(255,255,255,0.03);
+    }
+
+    .projects{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px}
+    .project{
+      padding:14px; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    .project h3{margin:0 0 6px 0; font-size:16px}
+    .project p{margin:0; color:var(--muted); font-size:13px}
+    .skills{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .chip{padding:8px 10px; border-radius:999px; background:rgba(255,255,255,0.03); font-size:13px; color:var(--muted); border:1px solid rgba(255,255,255,0.02)}
+
+    footer{display:flex; justify-content:space-between; align-items:center; padding:12px 18px; color:var(--muted); border-radius:12px; border:1px solid rgba(255,255,255,0.03); background:transparent}
+    .social{display:flex; gap:10px; align-items:center}
+    .social a{color:var(--muted); text-decoration:none; font-size:14px}
+
+    /* small screens */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr; text-align:center}
+      nav{display:none}
+      header{flex-direction:column; align-items:flex-start}
+    }
+
+    /* accessibility focus */
+    a:focus, button:focus { outline:3px solid rgba(124,58,237,0.18); outline-offset:3px; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap" role="document" aria-label="Portfolio">
+    <header>
+      <div class="brand">
+        <div class="logo">YA</div>
+        <div>
+            <!-- // Bhuvan A -->
+          <h1>YOUR_NAME</h1> 
+          <p>Computer Science • Developer • Open-source enthusiast</p>
+        </div>
+      </div>
+
+      <nav>
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn" href="#skills">Skills</a>
+        <a class="btn" href="#contact">Contact</a>
+        <!-- //github username -->
+        <a class="btn cta" href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">View GitHub</a> 
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="intro">
+            <!-- Bhuvan A -->
+          <h2>Hi — I'm <strong>YOUR_NAME</strong></h2> 
+          <p>Undergraduate in Computer Science & Engineering. I build web apps, small ML experiments, and open-source tools.</p>
+
+          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
+            <a class="btn cta" href="#projects">See my projects</a>
+            <a class="btn" href="mailto:your.email@example.com">Email me</a>
+            <a class="btn" href="resume.pdf" target="_blank">Resume</a>
+          </div>
+
+          <div style="margin-top:18px">
+            <h4 style="margin:0 0 8px 0">Quick facts</h4>
+            <div style="display:flex; gap:10px; flex-wrap:wrap">
+              <span class="chip">Django • SQLite</span>
+              <span class="chip">React • Node</span>
+              <span class="chip">Flutter • Firebase</span>
+              <span class="chip">Open-source contributor</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card">
+          <h3 style="margin-top:0">Contact & Social</h3>
+          <p style="color:var(--muted); margin-bottom:12px">Reach out or view my work:</p>
+
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <div><strong>GitHub:</strong> <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">github.com/YOUR_GITHUB_USERNAME</a></div>
+            <div><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">linkedin.com/in/YOUR_LINKEDIN</a></div>
+            <div><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></div>
+          </div>
+
+          <div style="margin-top:12px">
+            <h4 style="margin:0 0 8px 0">Availability</h4>
+            <p style="margin:0; color:var(--muted)">Open for internships & open-source collaborations.</p>
+          </div>
+        </aside>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <h2 style="margin:6px 0 12px 0">Projects</h2>
+        <div class="projects">
+          <article class="project">
+            <h3>EduBuddy — Personalized Learning Assistant</h3>
+            <p>AI-powered study assistant built with Django, SQLite and Gemini API.</p>
+            <p style="margin-top:8px"><a class="btn" href="#">View repo</a></p>
+          </article>
+
+          <article class="project">
+            <h3>Canteen App (Flutter + Firebase)</h3>
+            <p>College canteen ordering app with real-time updates.</p>
+            <p style="margin-top:8px"><a class="btn" href="#">View repo</a></p>
+          </article>
+
+          <article class="project">
+            <h3>SGPA & CGPA Calculator</h3>
+            <p>Full-stack grade calculator with Node & React.</p>
+            <p style="margin-top:8px"><a class="btn" href="#">View repo</a></p>
+          </article>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" style="margin-top:6px">
+        <h2 style="margin:6px 0 12px 0">Skills</h2>
+        <div class="skills">
+          <span class="chip">Python</span>
+          <span class="chip">Django</span>
+          <span class="chip">React</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">Flutter</span>
+          <span class="chip">SQLite</span>
+          <span class="chip">Git</span>
+          <span class="chip">Machine Learning</span>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" style="margin-top:6px">
+        <h2 style="margin:6px 0 12px 0">Contact</h2>
+        <div style="display:grid; grid-template-columns:1fr 320px; gap:16px;">
+          
+          
+
+          <aside style="padding:14px; border-radius:12px; border:1px solid rgba(255,255,255,0.03);">
+            <h4 style="margin:0 0 8px 0">Availability & Links</h4>
+            <p style="color:var(--muted); margin:0 0 12px 0">Find my work here:</p>
+            <div class="social" style="flex-direction:column; align-items:flex-start">
+              <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">GitHub</a>
+              <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
+              <a href="https://twitter.com/YOUR_TWITTER" target="_blank">Twitter</a>
+            </div>
+          </aside>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© <strong>YOUR_NAME</strong> • Built with HTML & CSS</div>
+      <div style="display:flex; gap:10px;">
+        <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
